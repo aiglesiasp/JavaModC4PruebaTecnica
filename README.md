@@ -11,11 +11,11 @@ Use this package
 pip install foobar
 ````
 
-<h2 align="center"> Tecnologias usadas </h1>
-<li> Java 8 </li>
-<li> Maven </li>
-<li> SpringBoot </li>
-<li> H2 </li>
-<li> JPA </li>
+## Tecnologias usadas
+- Java 8
+- Maven
+- SpringBoot
+- H2
+- JPA
 
 
