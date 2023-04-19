@@ -5,5 +5,7 @@
 ##Índice
 
 *[Título e imagen de portada](#Título-e-imagen-de-portada)
+
 *[Índice](#índice)
+
 *[Descripción del proyecto](#descripción-del-proyecto)
