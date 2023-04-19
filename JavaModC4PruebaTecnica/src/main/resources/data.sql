@@ -1,8 +1,7 @@
-DROP TABLE IF EXISTS usuarios;
-DROP TABLE IF EXISTS partidas;
-DROP TABLE IF EXISTS juegos;
 DROP TABLE IF EXISTS mensajes;
-DROP TABLE IF EXISTS usuario_partida;
+DROP TABLE IF EXISTS partidas;
+DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS juegos;
 
 CREATE TABLE IF NOT EXISTS juegos (
 						id INT AUTO_INCREMENT,
@@ -26,9 +25,12 @@ CREATE TABLE IF NOT EXISTS partidas (
 						juego INT,
                         usuario INT,
 						PRIMARY KEY(id),
-						CONSTRAINT juegos_fk FOREIGN KEY (juego) REFERENCES juegos (id),
+						CONSTRAINT juegos_fk FOREIGN KEY (juego) REFERENCES juegos (id)
+                        ON UPDATE CASCADE ON DELETE CASCADE,
                         CONSTRAINT usuarios_fk FOREIGN KEY (usuario) REFERENCES usuarios (id)
+                        ON UPDATE CASCADE ON DELETE CASCADE
 						);
+                        
 CREATE TABLE IF NOT EXISTS mensajes (
                         id INT AUTO_INCREMENT,
                         texto VARCHAR(250) DEFAULT NULL,
@@ -36,18 +38,11 @@ CREATE TABLE IF NOT EXISTS mensajes (
                         usuario INT,
                         partida INT,
                         PRIMARY KEY(id),
-                        CONSTRAINT partida_fk FOREIGN KEY (partida) REFERENCES partidas (id),
+                        CONSTRAINT partida_fk FOREIGN KEY (partida) REFERENCES partidas (id)
+                        ON UPDATE CASCADE ON DELETE CASCADE,
                         CONSTRAINT usuario_fk FOREIGN KEY (usuario) REFERENCES usuarios (id)
+                        ON UPDATE CASCADE ON DELETE CASCADE
     
-);
-
-CREATE TABLE IF NOT EXISTS usuario_partida (
-                        id INT AUTO_INCREMENT,
-                        usuario INT,
-                        partida INT,
-                        PRIMARY KEY(id),
-                        CONSTRAINT id_usuarios_fk FOREIGN KEY (usuario) REFERENCES usuarios (id),
-                        CONSTRAINT id_partidas_fk FOREIGN KEY (partida) REFERENCES partidas (id)
 );
                         
                         
@@ -73,17 +68,5 @@ INSERT INTO partidas (nombre, descripcion, juego, usuario) VALUES ('Partida 3', 
 INSERT INTO mensajes (texto, fecha, usuario, partida) VALUES ('Como va?', '2023-02-10', 1, 1);
 INSERT INTO mensajes (texto, fecha, usuario, partida) VALUES ('Todo bien gracias', '2023-02-10', 2, 1);
 INSERT INTO mensajes (texto, fecha, usuario, partida) VALUES ('De lujo', '2023-02-10', 3, 1);
-
-INSERT INTO usuario_partida (usuario, partida) VALUES (1, 1);
-INSERT INTO usuario_partida (usuario, partida) VALUES (2, 1);
-INSERT INTO usuario_partida (usuario, partida) VALUES (3, 1);
-
-INSERT INTO usuario_partida (usuario, partida) VALUES (4, 2);
-INSERT INTO usuario_partida (usuario, partida) VALUES (5, 2);
-INSERT INTO usuario_partida (usuario, partida) VALUES (6, 2);
-
-INSERT INTO usuario_partida (usuario, partida) VALUES (7, 3);
-INSERT INTO usuario_partida (usuario, partida) VALUES (8, 3);
-INSERT INTO usuario_partida (usuario, partida) VALUES (9, 3);
 
 

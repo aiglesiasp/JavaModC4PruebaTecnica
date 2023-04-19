@@ -6,6 +6,7 @@ package com.aiglesiasp.javamodc4.pruebatecnica.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.aiglesiasp.javamodc4.pruebatecnica.dao.IJuegoDAO;
 import com.aiglesiasp.javamodc4.pruebatecnica.dto.Juego;
@@ -14,6 +15,7 @@ import com.aiglesiasp.javamodc4.pruebatecnica.dto.Juego;
  * @author aitor
  *
  */
+@Service
 public class JuegoServiceImpl implements IJuegoService {
 
 	@Autowired

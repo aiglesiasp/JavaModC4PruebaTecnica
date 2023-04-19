@@ -34,12 +34,12 @@ public class Partida {
 	private String descripcion;
 
 	@ManyToOne
-	@JoinColumn(name = "departamento")
+	@JoinColumn(name = "juego")
 	private Juego juego;
 
 	// ONE TO MANY
 	@OneToMany
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "usuario")
 	private List<Usuario> usuario;
 
 	// IGNORE JSON
