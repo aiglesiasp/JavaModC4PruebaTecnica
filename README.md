@@ -5,17 +5,14 @@
 ## Descripción del proyecto
 Proyecto de Spring Maven para generar la API REST de una pagina de salas de juegos. En ella se administran las peticiones CRUD de Usuarios, Juegos, partidas y Mensajes. Los usuarios podran crear partidas de un tipo de juego en concreto. podran chatear entre ellos, etc...
 
-## Instalacion
-Use this package
-```bash
-pip install foobar
-````
-
 ## Tecnologias usadas
 - Java 8
 - Maven
 - SpringBoot
 - H2
 - JPA
+
+## POSTMAN
+GET ALL USUARIOS
 
 
