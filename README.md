@@ -13,6 +13,6 @@ Proyecto de Spring Maven para generar la API REST de una pagina de salas de jueg
 - JPA
 
 ## POSTMAN
-GET ALL USUARIOS
+<span style="color:green">GET</span> ALL USUARIOS
 
 
