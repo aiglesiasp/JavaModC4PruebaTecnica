@@ -47,4 +47,9 @@ public class JuegoServiceImpl implements IJuegoService {
 		
 	}
 
+	@Override
+	public List<Juego> listarJuegoNombre(String nombre) {
+		return iJuegoDAO.findByNombre(nombre);
+	}
+
 }

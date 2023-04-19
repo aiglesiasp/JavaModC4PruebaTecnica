@@ -47,4 +47,9 @@ public class UsuarioServiceImpl implements IUsuarioService{
 		
 	}
 
+	@Override
+	public List<Usuario> listarUsuarioNombre(String nombre) {
+		return iUsuarioDAO.findByNombre(nombre);
+	}
+
 }

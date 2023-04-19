@@ -47,6 +47,12 @@ public class UsuarioController {
 		return usuario;
 	}
 	
+	// BUSCAR EMPLEADO POR NOMBRE
+	@GetMapping("/usuarios/nombre/{nombre}")
+	public List<Usuario> listarUsuarioNombre(@PathVariable(name = "nombre") String username) {
+		return usuarioServiceImpl.listarUsuarioNombre(username);
+	}
+	
 	@PutMapping("/usuarios/{id}")
 	public Usuario actualizarUsuario(@PathVariable(name="id")int id,@RequestBody Usuario usuario) {
 		
@@ -54,7 +60,7 @@ public class UsuarioController {
 		Usuario usuario_actualizado= new Usuario();
 		usuario_seleccionado= usuarioServiceImpl.usuarioById(id);
 		
-		usuario_seleccionado.setUsername(usuario.getUsername());
+		usuario_seleccionado.setNombre(usuario.getNombre());
 		usuario_seleccionado.setEmail(usuario.getEmail());
 		usuario_seleccionado.setPass(usuario.getPass());
 		

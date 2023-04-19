@@ -46,6 +46,12 @@ public class JuegoController {
 		return juego;
 	}
 	
+	// BUSCAR EMPLEADO POR NOMBRE
+		@GetMapping("/juegos/nombre/{nombre}")
+		public List<Juego> listarJuegoNombre(@PathVariable(name = "nombre") String nombre) {
+			return juegoServiceImpl.listarJuegoNombre(nombre);
+		}
+	
 	@PutMapping("/juegos/{id}")
 	public Juego actualizarJuego(@PathVariable(name="id")int id,@RequestBody Juego juego) {
 		

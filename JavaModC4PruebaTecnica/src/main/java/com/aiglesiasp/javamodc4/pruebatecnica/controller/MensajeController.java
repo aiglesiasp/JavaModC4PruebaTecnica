@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aiglesiasp.javamodc4.pruebatecnica.dto.Mensaje;
+import com.aiglesiasp.javamodc4.pruebatecnica.dto.Usuario;
 import com.aiglesiasp.javamodc4.pruebatecnica.service.MensajeServiceImpl;
 
 /**
@@ -45,6 +46,11 @@ public class MensajeController {
 		Mensaje mensaje= new Mensaje();
 		mensaje = mensajeServiceImpl.mensajeById(id);
 		return mensaje;
+	}
+	
+	@GetMapping("/mensajes/usuario/{id}")
+	public List<Mensaje> listarMensajeNombre(@PathVariable(name = "id") Usuario usuario) {
+		return mensajeServiceImpl.listarMensajeUsuario(usuario);
 	}
 	
 	@PutMapping("/mensajes/{id}")

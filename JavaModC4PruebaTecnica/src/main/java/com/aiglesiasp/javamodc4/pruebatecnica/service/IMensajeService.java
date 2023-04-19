@@ -6,6 +6,7 @@ package com.aiglesiasp.javamodc4.pruebatecnica.service;
 import java.util.List;
 
 import com.aiglesiasp.javamodc4.pruebatecnica.dto.Mensaje;
+import com.aiglesiasp.javamodc4.pruebatecnica.dto.Usuario;
 
 /**
  * @author aitor
@@ -18,6 +19,8 @@ public interface IMensajeService {
 	public Mensaje guardarMensaje(Mensaje mensaje); // Guarda un mensaje CREATE
 
 	public Mensaje mensajeById(int codigo); // Leer datos de un mensaje READ
+
+	public List<Mensaje> listarMensajeUsuario(Usuario usuario);
 
 	public Mensaje actualizarMensaje(Mensaje mensaje); // Actualiza datos del mensaje UPDATE
 

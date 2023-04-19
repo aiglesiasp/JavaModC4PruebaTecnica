@@ -13,13 +13,15 @@ import com.aiglesiasp.javamodc4.pruebatecnica.dto.Juego;
  */
 public interface IJuegoService {
 	// Metodos del CRUD
-		public List<Juego> listarJuegos(); // Listar All
+	public List<Juego> listarJuegos(); // Listar All
 
-		public Juego guardarJuego(Juego juego); // Guarda un juego CREATE
+	public Juego guardarJuego(Juego juego); // Guarda un juego CREATE
 
-		public Juego juegoById(int codigo); // Leer datos de un juego READ
+	public Juego juegoById(int codigo); // Leer datos de un juego READ
 
-		public Juego actualizarJuego(Juego juego); // Actualiza datos del juego UPDATE
+	public List<Juego> listarJuegoNombre(String nombre);
 
-		public void eliminarJuego(int codigo);// Elimina el juego DELETE
+	public Juego actualizarJuego(Juego juego); // Actualiza datos del juego UPDATE
+
+	public void eliminarJuego(int codigo);// Elimina el juego DELETE
 }

@@ -47,4 +47,9 @@ public class PartidaServiceImpl implements IPartidaService {
 
 	}
 
+	@Override
+	public List<Partida> listarPartidaNombre(String nombre) {
+		return iPartidaDAO.findByNombre(nombre);
+	}
+
 }

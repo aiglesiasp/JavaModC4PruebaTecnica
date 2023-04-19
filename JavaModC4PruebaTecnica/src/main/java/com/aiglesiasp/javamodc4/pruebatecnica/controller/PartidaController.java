@@ -47,6 +47,12 @@ public class PartidaController {
 		return partida;
 	}
 	
+	// BUSCAR EMPLEADO POR NOMBRE
+	@GetMapping("/partidas/nombre/{nombre}")
+	public List<Partida> listarPartidaNombre(@PathVariable(name = "nombre") String nombre) {
+		return partidaServiceImpl.listarPartidaNombre(nombre);
+	}
+	
 	@PutMapping("/partidas/{id}")
 	public Partida actualizarPartida(@PathVariable(name="id")int id,@RequestBody Partida partida) {
 		

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.aiglesiasp.javamodc4.pruebatecnica.dao.IMensajeDAO;
 import com.aiglesiasp.javamodc4.pruebatecnica.dto.Mensaje;
+import com.aiglesiasp.javamodc4.pruebatecnica.dto.Usuario;
 
 /**
  * @author aitor
@@ -45,6 +46,11 @@ public class MensajeServiceImpl implements IMensajeService {
 	public void eliminarMensaje(int id) {
 		iMensajeDAO.deleteById(id);
 
+	}
+
+	@Override
+	public List<Mensaje> listarMensajeUsuario(Usuario usuario) {
+		return iMensajeDAO.findByUsuario(usuario);
 	}
 
 }

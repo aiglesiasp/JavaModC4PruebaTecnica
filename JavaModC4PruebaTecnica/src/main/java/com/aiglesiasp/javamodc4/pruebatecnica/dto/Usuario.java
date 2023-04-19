@@ -28,8 +28,8 @@ public class Usuario {
 			@Id
 			@GeneratedValue(strategy = GenerationType.IDENTITY)
 			private int id;
-			@Column(name = "username")
-			private String username;
+			@Column(name = "nombre")
+			private String nombre;
 			@Column(name = "email")
 			private String email;
 			@Column(name = "pass")
@@ -64,8 +64,8 @@ public class Usuario {
 				
 			}
 			
-			public Usuario(String username, String email, String pass) {
-				this.username = username;
+			public Usuario(String nombre, String email, String pass) {
+				this.nombre = nombre;
 				this.email = email;
 				this.pass = pass;
 			}
@@ -79,12 +79,12 @@ public class Usuario {
 				this.id = id;
 			}
 
-			public String getUsername() {
-				return username;
+			public String getNombre() {
+				return nombre;
 			}
 
-			public void setUsername(String username) {
-				this.username = username;
+			public void setNombre(String nombre) {
+				this.nombre = nombre;
 			}
 
 			public String getEmail() {
@@ -106,7 +106,7 @@ public class Usuario {
 			//TO STRING
 			@Override
 			public String toString() {
-				return "Usuario [id=" + id + ", username=" + username + ", email=" + email + ", pass=" + pass
+				return "Usuario [id=" + id + ", nombre=" + nombre + ", email=" + email + ", pass=" + pass
 						+ ", partida=" + partida + ", mensaje=" + mensaje + "]";
 			}
 			
