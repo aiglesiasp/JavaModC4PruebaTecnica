@@ -5,7 +5,6 @@ package com.aiglesiasp.javamodc4.pruebatecnica.service;
 
 import java.util.List;
 
-import com.aiglesiasp.javamodc4.pruebatecnica.dto.Juego;
 import com.aiglesiasp.javamodc4.pruebatecnica.dto.Usuario;
 
 /**
@@ -20,7 +19,7 @@ public interface IUsuarioService {
 
 			public Usuario usuarioById(int codigo); // Leer datos de un usuario READ
 
-			public Usuario actualizarUsuario(Juego usuario); // Actualiza datos del usuario UPDATE
+			public Usuario actualizarUsuario(Usuario usuario); // Actualiza datos del usuario UPDATE
 
 			public void eliminarUsuario(int codigo);// Elimina el usuario DELETE
 }
