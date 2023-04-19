@@ -11,3 +11,4 @@
 *[Descripción del proyecto](#descripción-del-proyecto)
 
 <h2 align="center"> Descripción del proyecto </h1>
+<p>Proyecto de Spring Maven para generar la API REST de una pagina de salas de juegos. En ella se administran las peticiones CRUD de Usuarios, Juegos, partidas y Mensajes. Los usuarios podran crear partidas de un tipo de juego en concreto. podran chatear entre ellos, etc...</p>
