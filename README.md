@@ -9,3 +9,5 @@
 *[Índice](#índice)
 
 *[Descripción del proyecto](#descripción-del-proyecto)
+
+<h2 align="center"> Descripción del proyecto </h1>
