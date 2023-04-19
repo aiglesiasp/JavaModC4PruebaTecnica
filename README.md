@@ -13,7 +13,7 @@ Proyecto de Spring Maven para generar la API REST de una pagina de salas de jueg
 - JPA
 
 ## POSTMAN
-
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
 - <span style="color:red">GET</span> ALL USUARIOS
 
 
